@@ -1,0 +1,9 @@
+Based on the provided Services Agreement between The Texas A&M University System and Deloitte Consulting LLP, please find the answers below:
+
+* **Business Continuity Plan:** Yes, Section 10.28 of the agreement outlines Deloitte's Disaster Recovery/Business Continuity program. (Page 28)
+* **Intellectual Property Rights:** Yes, Section 6 of the agreement details the ownership and use of work material, including intellectual property rights. (Page 3-5)
+* **Force Majeure:** Yes, Section 10.13 of the agreement includes language regarding force majeure. (Page 9)
+* **Indemnification:** Yes, Section 10.25 of the agreement outlines the indemnification and hold harmless clause. (Page 15)
+* **Press Release, Publicity:** Yes, Section 10.20.4 of the agreement discusses press releases and public statements, requiring prior written approval from A&M System. (Page 13)
+* **Product Warranty:** No, while Section 3.6 outlines some warranties for Deloitte's services, there is no specific language concerning product warranties. This agreement focuses on service delivery rather than product sales. (Page 2)
+* **Governing Law and Venue:** Yes, Section 10.10 of the agreement specifies the governing law as the substantive laws of the State of Texas and USA, and the venue for legal disputes. (Page 8) 

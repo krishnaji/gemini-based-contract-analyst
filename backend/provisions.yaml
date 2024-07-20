@@ -1,0 +1,14 @@
+- provision: Business continuity plan
+  question: Check if the business continuity related language is included in this contract?
+- provision: Intellectual property rights
+  question: Check if the intellectual property rights related language is included in this coltract?
+- provision: Force Majeure
+  question: Check if the force majeure related language is included in this contract?
+- provision: Indemnification
+  question: Check if the indemnification related language is included in this contract?
+- provision: Press Release, Publicity
+  question: Check if the press release or publicity related language is included in this contract?
+- provision: Product Warranty
+  question: Check if the product warranty related language is included in this contract?
+- provision: Governing Law and Venue
+  question: Check if the governing law and venue related language is included in this contract?

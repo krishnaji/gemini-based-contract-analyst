@@ -1,0 +1,4 @@
+flask
+flask-cors
+google-cloud-storage
+google-cloud-aiplatform

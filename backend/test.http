@@ -1,0 +1,7 @@
+POST http://127.0.0.1:8080
+content-type: application/json
+
+{
+       "provisions_file": "provisions.yaml",
+       "contract_file": "AM01-16-P012865.pdf"
+    }
