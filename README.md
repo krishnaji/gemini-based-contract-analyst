@@ -15,6 +15,8 @@ export BULK_ANSWER="Y"
 # set up to send one provisions and questions to model at a time
 export BULK_ANSWER="N"
 ```
+You can also update .env file and run ```load_env-variables.py``` to load all environment varaibles. 
+
 ## Run Frontend Gradio Application
 ```bash
 cd frontent
