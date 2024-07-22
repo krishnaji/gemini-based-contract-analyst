@@ -8,7 +8,13 @@
  export BUCKET_NAME=<yourbucketname>
  export PROJECT_ID=<yourprojectname>
 ```
-
+The app can be configured to send all provisions and questions to once or one at a time.
+```bash
+# set up to send all provisions and questions to model at once
+export BULK_ANSWER="Y"
+# set up to send one provisions and questions to model at a time
+export BULK_ANSWER="N"
+```
 ## Run Frontend Gradio Application
 ```bash
 cd frontent

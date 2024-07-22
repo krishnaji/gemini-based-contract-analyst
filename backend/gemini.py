@@ -1,6 +1,6 @@
 import os
 import vertexai
-
+import yaml
 PROJECT_ID = os.environ.get("PROJECT_ID") #"genai-380800"   
 LOCATION = "us-central1"   
 
@@ -65,13 +65,33 @@ safety_settings = {
 
 
 # contract_file = "gs://contact-analysis-app/AM01-16-P012865.pdf"
+bucket_name = os.environ.get("BUCKET_NAME") #"contract-analysis-app"
 
 def answer(provisions_file,contract_file):
-        CONTENT = Part.from_uri(f"gs://contact-analysis-app/"+contract_file, mime_type="application/pdf")
-        provisions_file_content = Part.from_text(provisions_file)
-        contents = ["PDF:",CONTENT,"Provisions:",provisions_file_content]
-        response = model.generate_content(contents)
-        # save response as text file
-        return response.text
+        if  os.environ.get("BULK_ANSWER")=="Y":
+          CONTENT = Part.from_uri(f"gs://{bucket_name}/"+contract_file, mime_type="application/pdf")
+          provisions_file_content = Part.from_text(provisions_file)
+          contents = ["PDF:",CONTENT,"Provisions:",provisions_file_content]
+          response = model.generate_content(contents)
+          # save response as text file
+          return response.text
+        if  os.environ.get("BULK_ANSWER")=="N":
+             parsed_provisions_file = yaml.safe_load(provisions_file)
+             responses = []
+             for item in parsed_provisions_file:
+                  CONTENT = Part.from_uri(f"gs://{bucket_name}/"+contract_file, mime_type="application/pdf")
+                  item_string = f"\nprovision: {item['provision']}\nquestion: {item['question']}"
+                  contents= ["PDF:",CONTENT,"Provisions:",item_string]
+                  response = model.generate_content(contents, safety_settings=safety_settings, generation_config=generation_config)
+                  # append iteam and response on next line
+                  responses.append(f"{item_string}\n{response.text}\n")
+             return "\n".join(responses)
+          
+
+             
+          
+                  
+
+             
 
 
