@@ -1,6 +1,9 @@
 ![](frontend/contract-analyst.jpg)  
 # Contract Analyst
+## Contract Review
 ![](agent-response.jpg)
+## Chat Assistant 
+![](chat-assistant.jpg)
 ## Configuration 
 ```bash
  pip install -r frontend/requirements.txt
