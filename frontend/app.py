@@ -132,12 +132,14 @@ def chat_with_gemini(message, history):
     
     if uploaded_file_uris:
         new_message_parts.append(Part.from_text("Please consider the uploaded documents in your response."))
-        uploaded_file_uris = []  # Reset after use
+        # uploaded_file_uris = []  # Reset after use
 
     new_message_parts.append(Part.from_text(message))
 
+    print(new_message_parts)
     # Send the new message and get the response
     response = chat_session.send_message(new_message_parts)
+
 
     # Return the response text
     return response.text
@@ -145,6 +147,8 @@ def chat_with_gemini(message, history):
 def bot(message, history):
     bot_message = chat_with_gemini(message, history)
     history.append((message, bot_message))
+    print(history)
+    print("--*--")
     return "", history
 
 def clear_files():
